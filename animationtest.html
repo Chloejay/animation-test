@@ -1,0 +1,164 @@
+<!DOCTYPE> 
+<html>
+<title>Animation test</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<header>Test</header>
+<style>
+	.box1 {
+		width: 100px;
+		height: 120px;
+		background-color: #9896F1; 
+		transform: skew(20deg);
+		animation-direction: alternate;
+		opacity: 0.3;
+		animation: skew 1s infinite; 
+	}
+
+	.box2{
+		width: 120px;
+		height: 100px;
+		background-color: #74F9FF; 
+		transform: skewY(20deg);
+		animation: skew 1s infinite;
+		opacity: 0.4;
+		margin: 40px;
+	}
+ @keyframes skew{
+   0%{
+   	transform: skewX(40deg);
+   }
+  100%{
+  	transform: skewX(-40deg);
+  }
+ }
+
+@keyframes skew{
+	0% {
+		transform: skewY(40deg);
+	}
+	100% {
+		transform:skewY(-40deg);
+	}
+}
+
+.box3 {
+		width: 120px;
+		height: 100px;
+		background-color: #F38181;  
+		transform: rotateX(20deg);
+		animation: rotate 1s infinite;
+		opacity: 0.4;
+		margin: 10px;
+
+}
+
+.box4 {
+		width: 100px;
+		height: 120px;
+		background-color: #E84A5F;  
+		transform: rotateY(20deg);
+		animation: rotate 1s infinite;
+		opacity: 0.4;
+		margin: 10px;
+
+}
+
+.box5 {
+		width: 100px;
+		height: 120px;
+		background-color:#B80D57;  
+		transform: rotate(20deg);
+		animation: rotate 1s infinite;
+		opacity: 0.4;
+		margin: 10px;
+
+}
+
+ #box{
+	display: inline-flex;
+	padding: 10px;
+}
+
+@keyframes rotate {
+	0% {
+		transform:rotate(40deg);
+	}
+
+	80%{
+		transform:rotate(-40deg);
+	}
+
+}
+
+.box6{
+	    width: 100px;
+		height: 120px;
+		background-color:#B80D57;  
+		transform: translate(20px, 30px);
+		animation: translate 2s infinite; 
+		transform-style: flat; 
+		transform-origin: 40% bottom; 
+
+}
+
+@keyframes translate {
+	0% {
+		transform: translate(20px, 30px);
+	}
+
+	100%{
+		transform: translate(100px, -20px);
+	}
+}
+
+.circle{
+	width: 100px;
+	height: 100px;
+	background-color: orange;
+	animation: hover 2s ease-in-out infinite both;
+	border-radius: 70%;
+}
+
+.circle2{
+	width: 80px;
+	height: 80px;
+	background-color: #FCE38A;
+	animation: hover 2.5s linear infinite both;
+	border-radius: 70%;
+}
+
+.circle3{
+	width:40px;
+	height: 40px;
+	background-color: #0278AE;
+	animation: hover 3s cubic-bezier(.18,.89,.74,.08) infinite both;
+	border-radius:70%;
+}
+
+@keyframes hover {
+	80% {
+		transform: translate(200px, -700px) scale(0.8) rotateX(40deg);
+	}
+}
+</style>
+
+<body>
+	<div class="box1"></div> 
+	<div class="box2"></div> 
+	<hr>
+<div id="box">
+	<div class="box3"></div>
+	<div class="box4"></div>
+	<div class="box5"></div>
+</div>
+	<hr>
+	<div class="box6"></div>
+	<hr>
+	<div class="circle"></div>
+	<div class="circle2"></div>
+	<div class="circle3"></div> 
+</body>
+
+</body>
+
+</html>
